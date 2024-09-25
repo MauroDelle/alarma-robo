@@ -7,8 +7,12 @@ const routes: Routes = [
     loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule),
   },
   {
-    path: '',
-    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule),
+    path: 'auth',
+    loadChildren: () =>  import('./auth/auth.module').then( m => m.AuthModule )
+  },
+  {
+    path: '**',
+    redirectTo: 'auth'
   },
 ];
 
