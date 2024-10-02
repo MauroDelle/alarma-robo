@@ -15,8 +15,6 @@ export class SplashPage implements OnInit {
   public router = inject(Router);
   public renderer = inject(Renderer2);
 
-
-
   ngOnInit(): void {
 
     setTimeout(() => {
@@ -28,7 +26,7 @@ export class SplashPage implements OnInit {
 
     setTimeout(() => {
        this.router.navigateByUrl('auth/login');
-    }, 4000);
+    }, 2000);
 
 
   }
